@@ -1,0 +1,235 @@
+{% extends "base.html" %} {% block content %}
+<div class="container-fluid" data-spy="scroll" data-target="#navbarMenu" data-offset="0">
+    <!--Carousal-->
+    <div data-ride="carousel" id="home">
+        <div class="carousel-inner">
+            <div>
+                <img src="/static/image/22.jpg" alt="first slide" class="d-block w-100">
+                <div class="carousel-caption">
+                    <div class="c-caption">
+                        <h1 class="display-2">
+                            Medical Prediction
+                        </h1>
+                        <h2 class="display-6">
+                            “It’s going to be interesting to see how society deals with artificial intelligence, but it will definitely be cool.”
+                                                                                   —Colin Angle
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+
+                        </h2>
+                        <a href="#pred">
+                            <button type="button" class="btn btn-outline-light btn-lg">
+                                Prediction Section
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row jumbotron">
+        <div>
+            <p class="lead" style="text-align: center;">
+                Our Whole Team is dedicated to helping people through this programs across the world to stand out and ease the medical accessibility. You can almost check your medical condition just by one click
+            </p>
+        </div>
+    </div> 
+    <!--information-->
+    
+    <div class="container-fluid" id="info" style="text-align: justify;">
+        <br>
+        <br>
+        <hr>
+        <div class="row padding">
+            <div class="col-sm-6">
+              <div class="card text-white bg-dark mb-3">
+                <div class="card-body">
+                  <h5 class="card-title h3">What is Brain Tumor?</h5>
+                  <p class="card-text">A brain tumor is a growth of abnormal cells in the brain. The anatomy of the brain is very complex, with different parts responsible for different nervous system functions. Brain tumors can develop in any part of the brain or skull, including its protective lining, the underside of the brain (skull base), the brainstem, the sinuses and the nasal cavity, and many.....</p>
+                  <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/brain-tumor" class="btn btn-outline-light">Continue...</a>
+                </div>
+              </div>
+            </div>
+   
+            <div class="col-sm-6">
+                <div class="card text-white bg-dark mb-3">
+                  <div class="card-body">
+                    <h5 class="card-title h3">Brain Tumor symptoms</h5>
+                    <p class="card-text">Different parts of the brain control different functions, so brain tumor symptoms will vary depending on the tumor’s location. For example, a brain tumor located in the cerebellum at the back of the head may cause trouble with movement, walking, balance and coordination. If the tumor affects the optic pathway, which is responsible for sight, vision changess.....</p>
+                    <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/brain-tumor" class="btn btn-outline-light">Continue...</a>
+                  </div>
+                </div>
+            </div>
+      </div>
+  
+
+    </div>
+
+    <!--welcome section--------------------------------------->
+    <div class="padding">
+        <div class="row text-center welcome">
+            <div class="col-12">
+                <hr>
+                <div class="parallex">
+                    <h1 class="display-3 d">Welcome to the World of Medical Intelligence</h1>
+                </div>  
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-----------------------------prediction section----------------------->
+    <br>
+    <hr>
+    <br>
+    <div class="row welcome text-center" id="pred">
+        <div class="col-12">
+            <h1 class="display-4">
+                Brain Tumor Prediction
+            </h1>
+            <hr>
+        </div>
+    </div>
+    <div class="container h-100" style="align-items: center; text-align: center; background-image: url(/static/css/b.jpg); max-width: 100%;">
+        <form id="upload-file" method="post" enctype="multipart/form-data">
+            <label for="imageUpload" class="btn btn-outline-dark btn btn-lg" style="width: 50%; margin-top: 2%;">
+                Upload Image
+            </label>
+            <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+        </form>
+    
+        <div class="container h-50">
+            <div class="image-section" style="display:none;">
+                <div class="img-preview" >
+                    <div id="imagePreview" style="text-align: center; margin-left: 172%;">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline-dark btn-lg " id="btn-predict">Predict!</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="loader" style="display:none; margin-left: 48%;" >
+        </div>
+  
+        <div class="card" style="width: 50%; margin-left: 25%;">
+            <div class="card-header h3" style="background-color: rgb(61, 61, 61);">
+                <p style="color: aliceblue;">Prediction Result</p>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title" id="result"></h5>
+                <a href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/brain-tumor" class="btn btn-outline-dark">See Details..</a>
+            </div>
+        </div>
+
+    
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--------------------Meet the team--------------------->
+    <br>
+    <br>
+    <div class="container-fluid padding" id="team">
+        <div class="row welcome text-center">
+            <div class="col-12">
+                <h1 class="display-4">
+                    Meet The Team
+                </h1>
+                <hr>
+            </div>
+            
+        </div>
+        
+        <div class="row padding">
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="/static/image/card/21.jpeg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Bruce Banner   
+                        </h4>
+                        <p class="/card-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum distinctio omnis blanditiis, sint unde tempora. Voluptatum ipsam aliquam natus veritatis repellat dolor, possimus excepturi tenetur doloribus autem. Impedit, facilis odio.
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="/static/image/card/2222.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Tony Stark    
+                        </h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum distinctio omnis blanditiis, sint unde tempora. Voluptatum ipsam aliquam natus veritatis repellat dolor, possimus excepturi tenetur doloribus autem. Impedit, facilis odio.
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="/static/image/card/Ant-Man-and-the-Wasp-1000x600.jpg" alt="" class="card-img-top">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            Hank Pym   
+                        </h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum distinctio omnis blanditiis, sint unde tempora. Voluptatum ipsam aliquam natus veritatis repellat dolor, possimus excepturi tenetur doloribus autem. Impedit, facilis odio.
+                        </p>
+                        <a href="#" class="btn btn-outline-secondary">See Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!----------------connect---------------->
+    <br>
+    <br>
+    <hr>
+    <div class="container-fluid padding " id="xpad">
+        <div class="row text-center padding">
+            <div class="col-12">
+                <h2>
+                    Connect
+                </h2>
+
+            </div>
+            <div class="col-12 social padding">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+
+
+            </div>
+
+        </div>
+
+    </div>  
+</div>
+
+</div>
+
+{% endblock %}

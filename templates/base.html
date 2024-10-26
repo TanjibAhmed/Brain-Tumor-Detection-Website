@@ -1,0 +1,70 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Medical Prediction</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Luckiest+Guy&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">      
+    <link rel="stylesheet" href="/static/css/main.css" type="text/css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light navbar-expand-md sticky-top" id="nav">
+        <a href="#home" class="navbar-brand"> <span class="display-4">Medical Prediction</span></a>
+        <ul class="navbar-nav ml-auto hero">
+            <li class="nav-item">
+                <a href="#home" class="nav-link"><button type="button" class="btn btn-outline-dark">Home</button> </a>
+            </li>
+            <li class="nav-item">
+                <a href="#info" class="nav-link"><button type="button" class="btn btn-outline-dark">Info</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="#pred" class="nav-link"><button type="button" class="btn btn-outline-dark">Prediction</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="#team" class="nav-link"><button type="button" class="btn btn-outline-dark">Team</button></a>
+            </li>
+            <li class="nav-item">
+                <a href="#xpad" class="nav-link"><button type="button" class="btn btn-outline-dark">Contuct us</button></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container-fluid">
+        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+    </div>
+</body>
+
+<footer>
+
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md">
+                    <h2 class="ico">Medical Prediction</h1>
+                <hr class="light">
+                <p>555-5555-5555</p>
+                <p>MedPred@gmail.com</p>
+            </div>
+
+        </div>
+        <div class="col-12 text-center">
+            <hr class="light">
+            <h5>&copy; MedPred.com</h5>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script> 
+   
+</footer>
+
+</html>
