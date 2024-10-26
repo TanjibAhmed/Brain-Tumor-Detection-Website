@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Luckiest+Guy&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <!--navigation bar-->
+        <nav class="navbar navbar-light bg-light navbar-expand-md sticky-top">
+            <a href="#" class="navbar-brand"> <span class="display-4">Medical Prediction</span></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse n " id="navbarMenu">
+            <ul class="navbar-nav ml-auto hero">
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><button type="button" class="btn btn-outline-dark">Home</button> </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><button type="button" class="btn btn-outline-dark">About</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><button type="button" class="btn btn-outline-dark">Services</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><button type="button" class="btn btn-outline-dark">Team</button></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><button type="button" class="btn btn-outline-dark">Contuct us</button></a>
+                </li>
+            </div>
+            </ul>
+        </nav>
+        <!---Prediction Section-->
+
+        <div class="container-fluid padding">
+            <div class="row text-center welcome">
+                <div class="col-12">
+                    <h1 class="display-4">
+                        Brain Tumor Prediction
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="wrapper">
+                <div class="image">
+                <img src="" alt="">
+                </div>
+                <div class="content">
+                <div class="icon">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <div class="text">
+                    No file chosen, yet!
+                </div>
+                </div>
+                <div id="cancel-btn">
+                <i class="fas fa-times"></i>
+                </div>
+                <div class="file-name">
+                File name here
+                </div>
+            </div>
+            <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+            <button onclick="Submit" id="custom-btn">Choose a file</button>
+            <input id="default-btn" type="file" hidden>
+        </div>
+        <br>
+        <br>
+        <br>
+        <script>
+            const wrapper = document.querySelector(".wrapper");
+            const fileName = document.querySelector(".file-name");
+            const defaultBtn = document.querySelector("#default-btn");
+            const customBtn = document.querySelector("#custom-btn");
+            const cancelBtn = document.querySelector("#cancel-btn i");
+            const img = document.querySelector("img");
+            let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+            function defaultBtnActive(){
+            defaultBtn.click();
+            }
+            defaultBtn.addEventListener("change", function(){
+            const file = this.files[0];
+            if(file){
+                const reader = new FileReader();
+                reader.onload = function(){
+                const result = reader.result;
+                img.src = result;
+                wrapper.classList.add("active");
+                }
+                cancelBtn.addEventListener("click", function(){
+                img.src = "";
+                wrapper.classList.remove("active");
+                })
+                reader.readAsDataURL(file);
+            }
+            if(this.value){
+                let valueStore = this.value.match(regExp);
+                fileName.textContent = valueStore;
+            }
+            });
+        </script>
+
+        <!-------------Prediction Result------------>
+        <hr>
+        <div class="container-fluid padding">
+            <div class="row text-center welcome">
+                <div class="col-12">
+                    <h1 class="display-4">
+                        Prediction result
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!----------------connect---------------->
+        <br>
+        <br>
+        <hr>
+        <div class="container-fluid padding " id="xpad">
+            <div class="row text-center padding">
+                <div class="col-12">
+                    <h2>
+                        Connect
+                    </h2>
+
+                </div>
+                <div class="col-12 social padding">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+
+
+                </div>
+
+            </div>
+
+        </div>  
+        <!---------------footer-------------->  
+        <footer>
+            <div class="container-fluid padding">
+                <div class="row text-center">
+                    <div class="col-md">
+                         <h2 class="ico">Medical Prediction</h1>
+                        <hr class="light">
+                        <p>555-5555-5555</p>
+                        <p>MedPred@gmail.com</p>
+                    </div>
+
+                </div>
+                <div class="col-12 text-center">
+                    <hr class="light">
+                    <h5>&copy; MedPred.com</h5>
+
+                </div>
+
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/dc7536a909.js" crossorigin="anonymous"></script>
+</html>
